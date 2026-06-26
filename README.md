@@ -2,7 +2,7 @@
 
 A personal internet radio station that streams your Last.fm top tracks to Icecast — automatically, continuously, and shuffled. Comes with a web dashboard showing now playing, your library, and recent scrobbles.
 
-![Last.fm Radio Dashboard](https://i.imgur.com/placeholder.png)
+![Last.fm Radio Dashboard](https://ohzihhthelwvyakzpvdh.supabase.co/storage/v1/object/sign/cdn/57192593-3a1f-4b8c-a7e1-862d1f488178/lastfmradiodemo.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV80OTg0N2Y0Ny1iN2RiLTQwNGUtYTAwZS1mMDk4NGM2MWEyMTAiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjZG4vNTcxOTI1OTMtM2ExZi00YjhjLWE3ZTEtODYyZDFmNDg4MTc4L2xhc3RmbXJhZGlvZGVtby5wbmciLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzgyNDgzODMwLCJleHAiOjE3ODI0ODc0MzB9.tb-IXmiGCr4_4syw-qPHdcnBnIaskEWUp7a1erX9kL0)
 
 ## How it works
 
