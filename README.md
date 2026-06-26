@@ -23,7 +23,7 @@ A personal internet radio station that streams your Last.fm top tracks to Icecas
 
 **1. Clone the repo**
 ```bash
-git clone https://github.com/yourusername/lastfm-radio
+git clone https://github.com/weareleon/lastfm-radio
 cd lastfm-radio
 ```
 
