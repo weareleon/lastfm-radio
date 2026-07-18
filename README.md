@@ -1,4 +1,4 @@
-# lastfm-radio
+# ![last.fm/radio](https://files.catbox.moe/i6ndqe.png)
 
 A personal internet radio station that streams your Last.fm top tracks to Icecast — automatically, continuously, and shuffled. Comes with a web dashboard showing now playing, your library, and recent scrobbles.
 
