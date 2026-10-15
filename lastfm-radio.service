@@ -1,0 +1,39 @@
+# lastfm-radio systemd service
+# ---------------------------------------------------------------------------
+# deploy: the localhost dream -> the vps dream
+#
+# 1. clone the repo somewhere permanent:
+#      sudo git clone https://github.com/weareleon/lastfm-radio /opt/lastfm-radio
+# 2. install deps:
+#      cd /opt/lastfm-radio && pip3 install -r requirements.txt
+# 3. configure (last.fm key + icecast password):
+#      cp config.example.py config.py && nano config.py
+# 4. install this unit:
+#      sudo cp lastfm-radio.service /etc/systemd/system/
+#      sudo systemctl daemon-reload
+#      sudo systemctl enable --now lastfm-radio
+#
+# logs:      journalctl -u lastfm-radio -f
+# status:    systemctl status lastfm-radio
+# ---------------------------------------------------------------------------
+
+[Unit]
+Description=lastfm-radio — personal last.fm radio station
+# icecast must be up first (adjust the service name to match your setup)
+Wants=network-online.target
+After=network-online.target icecast.service
+
+[Service]
+Type=simple
+# change this to the user that owns the repo checkout
+User=leon
+WorkingDirectory=/opt/lastfm-radio
+ExecStart=/usr/bin/python3 /opt/lastfm-radio/lastfm_radio.py
+Restart=always
+RestartSec=10
+# keep the music folder on disk even after restarts (default: yes)
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
