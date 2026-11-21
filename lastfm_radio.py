@@ -105,6 +105,8 @@ def fetch_top_tracks() -> list[dict]:
         return [{"artist": t["artist"]["name"], "title": t["name"]} for t in tracks]
     except Exception as e:
         log.error(f"Last.fm fetch failed: {e}")
+        log.error("If your API key is being rejected: from 1 December 2026 Last.fm "
+                  "API keys need a Last.fm Pro subscription (https://www.last.fm/pro).")
         return []
 
 def fetch_recent_scrobbles(limit: int = 10) -> list[dict]:

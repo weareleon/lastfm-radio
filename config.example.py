@@ -5,7 +5,9 @@
 from pathlib import Path
 
 # ── Last.fm ──────────────────────────────────
-# Get a free API key at https://www.last.fm/api/account/create
+# Get an API key at https://www.last.fm/api/account/create
+# From 1 December 2026 the account that owns the key needs Last.fm Pro:
+# https://www.last.fm/pro  (keys without Pro are rejected by the API)
 LASTFM_API_KEY   = "YOUR_LASTFM_API_KEY"
 LASTFM_USER      = "YOUR_LASTFM_USERNAME"
 LASTFM_PERIOD    = "1month"   # 7day | 1month | 3month | 6month | 12month | overall

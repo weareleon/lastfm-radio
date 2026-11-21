@@ -4,6 +4,9 @@ A personal internet radio station that streams your Last.fm top tracks to Icecas
 
 ![Last.fm Radio Dashboard](https://files.catbox.moe/6207tp.png)
 
+> [!IMPORTANT]
+> **From 1 December 2026, Last.fm API keys need a [Last.fm Pro](https://www.last.fm/pro) subscription.** Last.fm is independent now and the free API was costing them too much to keep up. Because last.fm/radio is self-hosted, you use your own API key, so the Last.fm account that owns that key needs Pro. Keys without Pro stop working until you subscribe. Read [Last.fm's announcement](https://support.last.fm/t/api-keys-will-require-pro-from-1st-december/121030) for the details.
+
 ## How it works
 
 1. Pulls your top tracks from the Last.fm API
@@ -17,7 +20,7 @@ A personal internet radio station that streams your Last.fm top tracks to Icecas
 - Python 3.10+
 - [ffmpeg](https://ffmpeg.org/download.html) installed and in your PATH
 - [Icecast](https://icecast.org/download/) running locally (or remotely)
-- A [Last.fm API key](https://www.last.fm/api/account/create) (free)
+- A [Last.fm API key](https://www.last.fm/api/account/create) on an account with [Last.fm Pro](https://www.last.fm/pro) (needed from 1 December 2026)
 
 ## Setup
 
@@ -38,7 +41,7 @@ cp config.example.py config.py
 ```
 
 Open `config.py` and fill in:
-- `LASTFM_API_KEY` — from https://www.last.fm/api/account/create
+- `LASTFM_API_KEY` — from https://www.last.fm/api/account/create (the account needs Last.fm Pro from 1 December 2026)
 - `LASTFM_USER` — your Last.fm username
 - `ICECAST_PASSWORD` — your Icecast source password
 - Adjust `LASTFM_PERIOD`, `LASTFM_LIMIT`, mount, bitrate etc. as needed
